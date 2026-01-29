@@ -11,12 +11,12 @@ import {
 export default function Nav() {
     return (
         <nav className="flex justify-center items-center gap-5 rounded-md py-4 px-8">
-            <Image src="/logo.png" alt="logo" width={100} height={100} />
-            <div className="md:flex gap-1 hidden">
+            <Image className="cursor-pointer" src="/logo.png" alt="logo" width={100} height={100} />
+            <div className="md:flex gap-1 hidden cursor-pointer">
                 <House />
                 <p>Home</p>
             </div>
-            <div className="md:flex gap-1 hidden">
+            <div className="md:flex gap-1 hidden cursor-pointer">
                 <LayoutGrid />
                 <p>Categories</p>
             </div>
@@ -32,18 +32,18 @@ export default function Nav() {
                         placeholder="Search For Items...."
                     />
                 </div>
-                <div className="p-3 rounded-e-lg bg-[#014162] md:block hidden">
+                <div className="p-3 cursor-pointer rounded-e-lg bg-[#014162] md:block hidden">
                     <Search className="text-white " />
                 </div>
             </div>
-            <div className="md:flex gap-1 hidden items-center">
+            <div className="md:flex gap-1 hidden items-center cursor-pointer">
                 <div className="relative">
                     <ShoppingCart className="text-gray-300" />
                     <span className="absolute -top-2 -right-2 bg-gray-300 text-white rounded-full w-5 h-5 flex justify-center items-center">3</span>
                 </div>
                 <p>My Cart</p>
             </div>
-            <div className="bg-[#014162] rounded-lg p-2 md:flex gap-1 hidden">
+            <div className="bg-[#014162] cursor-pointer rounded-lg p-2 md:flex gap-1 hidden">
                 <User className="text-white" />
                 <p className="text-white">Sarah's Profile</p>
             </div>

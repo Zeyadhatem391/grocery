@@ -21,7 +21,7 @@ export default function Hero() {
                     <p className="text-lg mb-6">
                         Save up to 60% off on your first order
                     </p>
-                    <button className="rounded-lg bg-[#D9D9D9] px-15 py-3 text-black">
+                    <button className="rounded-lg bg-[#D9D9D9] px-15 py-3 text-black cursor-pointer">
                         Shop Now
                     </button>
                 </div>
