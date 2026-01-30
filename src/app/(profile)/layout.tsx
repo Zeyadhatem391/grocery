@@ -1,8 +1,13 @@
 "use client";
 
+// Components 
 import Container from "@/components/common/Container";
 import Navbar from "@/components/layout/Navbar";
+
+// API
 import { profileAPI } from "@/lib/api/test.api";
+
+// React
 import { useEffect, useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

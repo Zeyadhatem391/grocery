@@ -1,4 +1,7 @@
+// Components
 import { Spinner } from "@/components/ui/spinner";
+
+// Icons
 import {
   PoundSterling,
   TrendingUp,

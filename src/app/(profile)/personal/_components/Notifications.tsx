@@ -2,7 +2,11 @@
 
 // UI Components
 import { Switch } from "@/components/ui/switch";
+
+// API
 import { notificationAPI } from "@/lib/api/test.api";
+
+// React
 import { useEffect, useState } from "react";
 
 export default function Notifications() {

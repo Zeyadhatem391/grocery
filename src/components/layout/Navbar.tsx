@@ -1,11 +1,11 @@
 "use client";
 
+// Icons
 import {
   CircleQuestionMark,
   Crown,
   LayoutDashboard,
   ListChecks,
-  LogOut,
   MapPin,
   Package,
   Settings,
@@ -14,10 +14,13 @@ import {
   Wallet,
   WalletMinimal,
 } from "lucide-react";
+
+// React
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// Data
 const links = [
   {
     name: "Dashboard",

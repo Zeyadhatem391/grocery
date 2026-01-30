@@ -1,5 +1,7 @@
-// Icons
+// Components
 import { Spinner } from "@/components/ui/spinner";
+
+// Icons
 import { ShoppingCart, ChevronRight, Calendar } from "lucide-react";
 
 // Next

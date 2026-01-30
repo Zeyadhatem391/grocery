@@ -1,10 +1,24 @@
+
+
+// API
 import { profileAPI } from "@/lib/api/test.api";
+
+// Schemas
 import { personalSchema } from "@/lib/schemas/personal";
-import { zodResolver } from "@hookform/resolvers/zod";
+
+// Icons
 import { Mail, Phone, SquarePen, User } from "lucide-react";
+
+// React Hooks
 import { useEffect, useState } from "react";
+
+// Form
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+
+// UI Components
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
   Select,

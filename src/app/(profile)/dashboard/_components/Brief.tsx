@@ -1,4 +1,7 @@
+// Components
 import { Spinner } from "@/components/ui/spinner";
+
+// Icons
 import { Package, PoundSterling, Star } from "lucide-react";
 
 export default function Brief({ dashboardData, userData, isLoading }: any) {

@@ -46,9 +46,10 @@ export default function Avatar({ dataUser }: any) {
 
         <div className="flex flex-wrap gap-6 items-center">
           <div className="h-[96px] w-[96px] rounded-full overflow-hidden relative">
-            <img
+            <Image
               src={imageSrc}
               alt="Profile"
+              fill
               className="relative -top-3 object-cover"
             />
           </div>

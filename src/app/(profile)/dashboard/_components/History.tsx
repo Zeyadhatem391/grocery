@@ -1,6 +1,8 @@
+// Components
 import { Button } from "@/components/ui/Button";
 import { Spinner } from "@/components/ui/spinner";
 
+// Next
 import Image from "next/image";
 
 export default function History({ dashboardData, isLoading }: any) {

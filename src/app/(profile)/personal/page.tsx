@@ -4,7 +4,11 @@
 import Basic from "./_components/Basic";
 import Notifications from "./_components/Notifications";
 import Avatar from "./_components/Avatar";
+
+// API
 import { profileAPI } from "@/lib/api/test.api";
+
+// React
 import { useEffect, useState } from "react";
 
 export default function Personal() {
