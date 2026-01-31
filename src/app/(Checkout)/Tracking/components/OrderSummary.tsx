@@ -26,21 +26,23 @@ export default function OrderSummary() {
           </div>
 
           {/* Schedule Delivery / buttons */}
-          <div className="flex  justify-between gap-3 mt-5">
+          <div className="flex gap-10 justify-start  mt-5">
+            {/* Download Receipt */}
             <button
               type="button"
-              className="bg-[#BCB8B1] gap-2 text-[#014162] font-normal  justify-center"
+              className="flex items-center justify-center gap-2 py-2 px-4  rounded-md  text-[#014162] bg-[#BCB8B1] text-sm sm:text-base font-medium sm:w-auto"
             >
-              <ReceiptIndianRupee />
-              Download Receipt
+              <ReceiptIndianRupee className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span>Download Receipt</span>
             </button>
 
+            {/* Reorder */}
             <button
               type="button"
-              className="bg-[#BCB8B1] gap-2 text-[#014162] font-normal  justify-center"
+              className=" flex items-center justify-center gap-2  py-2 px-6  rounded-md text-[#014162] bg-[#BCB8B1] text-sm sm:text-base font-medium sm:w-auto"
             >
-              <ArrowUpWideNarrow />
-              Reorder
+              <ArrowUpWideNarrow className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span>Reorder</span>
             </button>
           </div>
 
@@ -48,28 +50,28 @@ export default function OrderSummary() {
           <div className="flex flex-col mt-5">
             <p className="text-lg mb-2">How Was Your Experience</p>
             <div className="flex py-2 gap-1">
-              <Star className="text-yellow-400" />
-              <Star className="text-yellow-400" />
-              <Star className="text-yellow-400" />
-              <Star className="text-yellow-400" />
-              <Star className="text-yellow-400" />
+              <Star  />
+              <Star  />
+              <Star  />
+              <Star  />
+              <Star  />
             </div>
-            <Input placeholder="Leave a comment..." className="mt-3" />
+            <Input className="mt-3" />
           </div>
 
           {/* Special Offer Code */}
-          <div className="pt-5 w-full sm:w-1/2">
+          <div className="pt-5 w-full sm:w-2/3 ">
             <p className="font-medium text-xl mb-4">Special Offer Code</p>
 
-            <div className="border p-3 rounded-xl space-y-3 flex flex-col">
+            <div className="border px-3 py-5 rounded-xl space-y-3 flex flex-col">
               <p className="text-[#014162] text-lg font-normal">Offer Code</p>
               <div className="flex gap-3">
                 <Input placeholder="Enter code" className="flex-1" />
               </div>
 
-              <button className="bg-[#014162] text-[#F7FCFF] w-full flex justify-center gap-2">
-                Shop Now
-                <ChevronRight />
+              <button className=" w-full py-2 flex items-center justify-center gap-2 rounded-md bg-[#014162] text-[#F7FCFF] text-sm sm:text-base font-semibold">
+                <span>Shop Now</span>
+                <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
           </div>

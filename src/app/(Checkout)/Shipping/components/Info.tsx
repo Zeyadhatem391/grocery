@@ -84,15 +84,23 @@ export default function Info() {
             {/* Fulfilment Method */}
             <div>
               <p className="text-base lg:text-lg mb-2">Fulfilment Method</p>
-              <div className="flex gap-3 w-full">
-                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
-                  <Van className="w-4 h-4" />
-                  <span className="text-sm sm:text-base">Delivery</span>
+              <div className="flex gap-20 justify-start px-1">
+                {/* Delivery */}
+                <button
+                  type="button"
+                  className=" flex items-center justify-center gap-2 py-2 px-7 rounded-md  text-[#014162] bg-[#BCB8B1]  text-sm sm:text-base font-medium"
+                >
+                  <Van className="w-5 h-5" />
+                  <span>Delivery</span>
                 </button>
 
-                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
-                  <Car className="w-4 h-4" />
-                  <span className="text-sm sm:text-base">Pick-Up</span>
+                {/* Pick-Up */}
+                <button
+                  type="button"
+                  className="  flex items-center justify-center gap-2 py-2 px-7 rounded-md text-[#014162]  bg-[#BCB8B1] text-sm sm:text-base font-medium"
+                >
+                  <Car className="w-5 h-5" />
+                  <span>Pick-Up</span>
                 </button>
               </div>
             </div>
@@ -115,14 +123,22 @@ export default function Info() {
             {/* Schedule Delivery */}
             <div>
               <p className="text-base lg:text-lg mb-2">Schedule Delivery</p>
-              <div className="flex gap-3 w-full">
-                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
-                  <RotateCcw className="w-4 h-4" />
+              <div className="flex gap-20 justify-start px-1">
+                {/* Delivery */}
+                <button
+                  type="button"
+                  className=" flex items-center justify-center gap-2 py-2 px-7 rounded-md  text-[#014162] bg-[#BCB8B1]  text-sm sm:text-base font-medium"
+                >
+                  <RotateCcw className="w-5 h-5" />
                   <span className="text-sm sm:text-base">Deliver Now</span>
                 </button>
 
-                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
-                  <Clock7 className="w-4 h-4" />
+                {/* Pick-Up */}
+                <button
+                  type="button"
+                  className="  flex items-center justify-center gap-2 py-2 px-7 rounded-md text-[#014162]  bg-[#BCB8B1] text-sm sm:text-base font-medium"
+                >
+                  <Clock7 className="w-5 h-5" />
                   <span className="text-sm sm:text-base">Deliver Later</span>
                 </button>
               </div>
@@ -131,14 +147,22 @@ export default function Info() {
             {/* Delivery Speed */}
             <div>
               <p className="text-base lg:text-lg mb-2">Delivery Speed</p>
-              <div className="flex gap-3 w-full">
-                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
-                  <Package className="w-4 h-4" />
+              <div className="flex gap-20 justify-start px-1">
+                {/* Standard */}
+                <button
+                  type="button"
+                  className=" flex items-center justify-center gap-2 py-2 px-7 rounded-md  text-[#014162] bg-[#BCB8B1]  text-sm sm:text-base font-medium"
+                >
+                  <Package className="w-5 h-5" />
                   <span className="text-sm sm:text-base">Standard</span>
                 </button>
 
-                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
-                  <ClockCheck className="w-4 h-4" />
+                {/* Priority */}
+                <button
+                  type="button"
+                  className="  flex items-center justify-center gap-2 py-2 px-7 rounded-md text-[#014162]  bg-[#BCB8B1] text-sm sm:text-base font-medium"
+                >
+                  <ClockCheck className="w-5 h-5" />
                   <span className="text-sm sm:text-base">Priority</span>
                 </button>
               </div>
@@ -146,8 +170,9 @@ export default function Info() {
 
             {/* Estimated Arrival */}
             <div className="flex flex-col gap-1">
-              <label className="text-base lg:text-lg">Estimated Arrival</label>
+              <label className="text-base lg:text-lg ">Estimated Arrival</label>
               <Input
+              className="lg:w-2/3"
                 placeholder="45 Min, 30/1/25 at 2:30 PM"
                 {...register("arrival")}
               />

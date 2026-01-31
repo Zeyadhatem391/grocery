@@ -60,7 +60,7 @@ export default function PaymentMethod() {
           ))}
 
           {/* Add Card */}
-          <button className="w-full flex items-center gap-2 mb-6">
+          <button className="w-full flex items-center gap-2 mb-6 border-2 rounded-md p-3.5 hover:border-[#014162]">
             <Plus className="w-4 h-4" />
             Add New Card
           </button>
@@ -72,15 +72,21 @@ export default function PaymentMethod() {
               Promo Code
             </p>
 
-            <div className="border p-3 rounded-xl space-y-3">
-              <div className="flex items-center gap-3 flex-wrap">
-                <button className="text-sm">SAVE10</button>
-                <p className="text-[10px] sm:text-[12px] text-gray-500">
-                  Try: SAVE10 or WELCOME20
+            <div className="border border-gray-200 p-4 rounded-xl space-y-3 bg-white">
+              {/* Promo Row */}
+              <div className="flex items-center gap-2 flex-wrap">
+                <button className="px-3.5 py-2.5 text-xs sm:text-sm font-semibold rounded-md border-2">
+                  SAVE10
+                </button>
+
+                <p className="text-[10px] sm:text-xs text-gray-500">
+                  Try: <span className="font-medium">SAVE10</span> or{" "}
+                  <span className="font-medium">WELCOME20</span>
                 </p>
               </div>
 
-              <button className="bg-[#BCB8B1] text-[#014162] w-full">
+              {/* Apply Button */}
+              <button className=" w-1/2 h-[42] rounded-lg  text-[#014162] bg-[#BCB8B1] text-sm font-semibold  hover:bg-[#8f8d8a]  transition-colors shadow-sm ">
                 Apply Code
               </button>
             </div>

@@ -46,20 +46,21 @@ export default function DriverInfo() {
 
           {/* Right: Call / Chat buttons */}
           <div className="flex flex-row gap-3 sm:gap-5 mt-4 md:mt-0">
+            {/* Call */}
             <button
               type="button"
-              className="bg-[#014162] gap-2 font-normal  justify-center"
+              className="flex items-center justify-center gap-2 h-[42] px-4 sm:px-5 rounded-md bg-[#014162] text-white text-sm sm:text-base font-medium hover:bg-[#01324a] transition-all shadow-sm active:scale-[0.97]"
             >
-              <Phone />
-              Call
+              <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span>Call</span>
             </button>
-
+            {/* Chat */}
             <button
               type="button"
-              className="bg-[#014162] gap-2 font-normal   justify-center"
+              className=" flex items-center justify-center gap-2 h-[42] px-4 sm:px-5 rounded-md  bg-[#014162]  text-white text-sm sm:text-base  font-medium hover:bg-[#01324a] transition-all shadow-sm active:scale-[0.97]"
             >
-              <MessageCircle />
-              Chat
+              <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span>Chat</span>
             </button>
           </div>
         </div>
