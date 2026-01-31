@@ -22,7 +22,7 @@ type FormValues = {
   arrival: string;
 };
 
-export function Info() {
+export default function Info() {
   const { register, handleSubmit } = useForm<FormValues>();
 
   const onSubmit = (data: FormValues) => {
