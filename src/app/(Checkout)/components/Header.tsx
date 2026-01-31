@@ -9,10 +9,7 @@ import {
   Menu,
 } from "lucide-react";
 import Image from "next/image";
-
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-
 export default function Header() {
   return (
     <header className="w-full h-16 sm:h-20 bg-[#F7FCFF] px-4 sm:px-8 flex items-center justify-between shadow-sm">
@@ -64,9 +61,9 @@ export default function Header() {
           />
         </div>
 
-        <Button className="w-[52] h-[42] rounded-none bg-[#014162] hover:bg-[#01324a]">
+        <button className="w-[52] h-[42] rounded-none bg-[#014162] hover:bg-[#01324a]">
           <Search className="w-5 h-5 text-white" />
-        </Button>
+        </button>
       </div>
 
       {/* ==== Right Section ==== */}
@@ -82,11 +79,11 @@ export default function Header() {
           <p className="font-normal hidden sm:block">My cart</p>
         </div>
 
-        {/* ==== Profile Button ==== */}
-        <Button className="bg-[#014162] hover:bg-[#01324a] rounded-sm hidden md:flex gap-2 px-4">
+        {/* ==== Profile button ==== */}
+        <button className="bg-[#014162] hover:bg-[#01324a] rounded-sm hidden md:flex gap-2 px-4">
           <User className="w-5 h-5" />
           Sarah’s Profile
-        </Button>
+        </button>
 
         {/* ==== Mobile Profile Icon ==== */}
         <div className="md:hidden">
@@ -95,13 +92,10 @@ export default function Header() {
 
         {/* ==== Sign Up (hidden now as original) ==== */}
         <div className="hidden">
-          <Button
-            variant="outline"
-            className="rounded-2xl flex gap-2 px-4 border-[#014162] text-[#014162] hover:bg-[#014162] hover:text-white "
-          >
+          <button className="rounded-2xl flex gap-2 px-4 border-[#014162] text-[#014162] hover:bg-[#014162] hover:text-white ">
             <LogIn className="w-5 h-5" />
             Sign up
-          </Button>
+          </button>
         </div>
       </div>
     </header>

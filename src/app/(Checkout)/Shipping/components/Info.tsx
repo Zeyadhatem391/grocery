@@ -1,6 +1,5 @@
 "use client";
 import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import CartSummary from "../../components/CartSummary";
@@ -86,15 +85,15 @@ export default function Info() {
             <div>
               <p className="text-base lg:text-lg mb-2">Fulfilment Method</p>
               <div className="flex gap-3 w-full">
-                <Button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
+                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
                   <Van className="w-4 h-4" />
                   <span className="text-sm sm:text-base">Delivery</span>
-                </Button>
+                </button>
 
-                <Button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
+                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
                   <Car className="w-4 h-4" />
                   <span className="text-sm sm:text-base">Pick-Up</span>
-                </Button>
+                </button>
               </div>
             </div>
 
@@ -117,15 +116,15 @@ export default function Info() {
             <div>
               <p className="text-base lg:text-lg mb-2">Schedule Delivery</p>
               <div className="flex gap-3 w-full">
-                <Button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
+                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
                   <RotateCcw className="w-4 h-4" />
                   <span className="text-sm sm:text-base">Deliver Now</span>
-                </Button>
+                </button>
 
-                <Button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
+                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
                   <Clock7 className="w-4 h-4" />
                   <span className="text-sm sm:text-base">Deliver Later</span>
-                </Button>
+                </button>
               </div>
             </div>
 
@@ -133,15 +132,15 @@ export default function Info() {
             <div>
               <p className="text-base lg:text-lg mb-2">Delivery Speed</p>
               <div className="flex gap-3 w-full">
-                <Button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
+                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
                   <Package className="w-4 h-4" />
                   <span className="text-sm sm:text-base">Standard</span>
-                </Button>
+                </button>
 
-                <Button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
+                <button type="button" className="bg-[#BCB8B1] flex-1 gap-2 text-[#014162]">
                   <ClockCheck className="w-4 h-4" />
                   <span className="text-sm sm:text-base">Priority</span>
-                </Button>
+                </button>
               </div>
             </div>
 

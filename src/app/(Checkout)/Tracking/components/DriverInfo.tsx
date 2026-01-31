@@ -1,5 +1,4 @@
 import { Star, Phone, MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function DriverInfo() {
@@ -45,23 +44,23 @@ export default function DriverInfo() {
             </div>
           </div>
 
-          {/* Right: Call / Chat Buttons */}
+          {/* Right: Call / Chat buttons */}
           <div className="flex flex-row gap-3 sm:gap-5 mt-4 md:mt-0">
-            <Button
+            <button
               type="button"
               className="bg-[#014162] gap-2 font-normal  justify-center"
             >
               <Phone />
               Call
-            </Button>
+            </button>
 
-            <Button
+            <button
               type="button"
               className="bg-[#014162] gap-2 font-normal   justify-center"
             >
               <MessageCircle />
               Chat
-            </Button>
+            </button>
           </div>
         </div>
 

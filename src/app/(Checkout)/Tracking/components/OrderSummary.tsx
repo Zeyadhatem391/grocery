@@ -1,5 +1,4 @@
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import {
   ReceiptIndianRupee,
   ArrowUpWideNarrow,
@@ -26,23 +25,23 @@ export default function OrderSummary() {
             <Input placeholder="Villa 14, Street 23, District 5, New Cairo" />
           </div>
 
-          {/* Schedule Delivery / Buttons */}
+          {/* Schedule Delivery / buttons */}
           <div className="flex  justify-between gap-3 mt-5">
-            <Button
+            <button
               type="button"
               className="bg-[#BCB8B1] gap-2 text-[#014162] font-normal  justify-center"
             >
               <ReceiptIndianRupee />
               Download Receipt
-            </Button>
+            </button>
 
-            <Button
+            <button
               type="button"
               className="bg-[#BCB8B1] gap-2 text-[#014162] font-normal  justify-center"
             >
               <ArrowUpWideNarrow />
               Reorder
-            </Button>
+            </button>
           </div>
 
           {/* Rating / Experience */}
@@ -68,10 +67,10 @@ export default function OrderSummary() {
                 <Input placeholder="Enter code" className="flex-1" />
               </div>
 
-              <Button className="bg-[#014162] text-[#F7FCFF] w-full flex justify-center gap-2">
+              <button className="bg-[#014162] text-[#F7FCFF] w-full flex justify-center gap-2">
                 Shop Now
                 <ChevronRight />
-              </Button>
+              </button>
             </div>
           </div>
         </div>

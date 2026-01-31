@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { FileCheck, Lock, Plus, BadgeCheck } from "lucide-react";
 
 export default function PaymentMethod() {
@@ -32,7 +31,11 @@ export default function PaymentMethod() {
           {/* Card */}
           {[
             { img: "/images/visa.png", title: "Visa •••• 4242", exp: "12/25" },
-            { img: "/images/master.png", title: "Mastercard •••• 8888", exp: "08/26" },
+            {
+              img: "/images/master.png",
+              title: "Mastercard •••• 8888",
+              exp: "08/26",
+            },
           ].map((card, index) => (
             <div
               key={index}
@@ -46,20 +49,21 @@ export default function PaymentMethod() {
                 className="rounded-md object-cover"
               />
               <div>
-                <p className="text-[14px] sm:text-[16px] font-normal">{card.title}</p>
-                <p className="text-xs sm:text-sm text-[#6B6F75]">Expires {card.exp}</p>
+                <p className="text-[14px] sm:text-[16px] font-normal">
+                  {card.title}
+                </p>
+                <p className="text-xs sm:text-sm text-[#6B6F75]">
+                  Expires {card.exp}
+                </p>
               </div>
             </div>
           ))}
 
           {/* Add Card */}
-          <Button
-            variant="outline"
-            className="w-full flex items-center gap-2 mb-6"
-          >
+          <button className="w-full flex items-center gap-2 mb-6">
             <Plus className="w-4 h-4" />
             Add New Card
-          </Button>
+          </button>
 
           {/* Promo Code */}
           <div>
@@ -70,31 +74,47 @@ export default function PaymentMethod() {
 
             <div className="border p-3 rounded-xl space-y-3">
               <div className="flex items-center gap-3 flex-wrap">
-                <Button variant="outline" className="text-sm">
-                  SAVE10
-                </Button>
+                <button className="text-sm">SAVE10</button>
                 <p className="text-[10px] sm:text-[12px] text-gray-500">
                   Try: SAVE10 or WELCOME20
                 </p>
               </div>
 
-              <Button className="bg-[#BCB8B1] text-[#014162] w-full">
+              <button className="bg-[#BCB8B1] text-[#014162] w-full">
                 Apply Code
-              </Button>
+              </button>
             </div>
           </div>
         </div>
 
         {/* ================= Other Payment Methods ================= */}
         <div className="w-full lg:w-[320px]">
-          <p className="font-medium text-lg sm:text-xl mb-4">Other Payment Methods</p>
+          <p className="font-medium text-lg sm:text-xl mb-4">
+            Other Payment Methods
+          </p>
 
           {/* Method */}
           {[
-            { title: "Cash on Delivery", desc: "Pay when you receive your order", link: "/images/cash.png" },
-            { title: "Apple Pay", desc: "Quick checkout with Apple Pay", link: "/images/A-pay.png" },
-            { title: "Google Pay", desc: "Quick checkout with Google Pay", link: "/images/G-pay.png" },
-            { title: "Wallet Pay", desc: "Digital wallet payment", link: "/images/wallet.png" },
+            {
+              title: "Cash on Delivery",
+              desc: "Pay when you receive your order",
+              link: "/images/cash.png",
+            },
+            {
+              title: "Apple Pay",
+              desc: "Quick checkout with Apple Pay",
+              link: "/images/A-pay.png",
+            },
+            {
+              title: "Google Pay",
+              desc: "Quick checkout with Google Pay",
+              link: "/images/G-pay.png",
+            },
+            {
+              title: "Wallet Pay",
+              desc: "Digital wallet payment",
+              link: "/images/wallet.png",
+            },
           ].map((item, index) => (
             <div
               key={index}
@@ -108,7 +128,9 @@ export default function PaymentMethod() {
                 className="rounded-md object-cover"
               />
               <div>
-                <p className="text-[14px] sm:text-[16px] font-normal">{item.title}</p>
+                <p className="text-[14px] sm:text-[16px] font-normal">
+                  {item.title}
+                </p>
                 <p className="text-xs sm:text-sm text-[#6B6F75]">{item.desc}</p>
               </div>
             </div>
