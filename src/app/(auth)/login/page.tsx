@@ -12,7 +12,9 @@ export default function LoginPage() {
       <h1 className="text-maroon-700 text-3xl -ml-17 font-semibold  max-w-sm w-full">
         Login your account!
       </h1>
-      <span className="text-zinc-800 font-bold text-md block -ml-64 -mt-3">Welcome to Grocery Plus</span>
+      <span className="text-zinc-800 font-bold text-md block -ml-64 -mt-3">
+        Welcome to Grocery Plus
+      </span>
 
       {/* login form */}
       <LoginForm />
@@ -39,9 +41,9 @@ export default function LoginPage() {
       {/* footer */}
       <footer>
         <p className="text-zinc-800 font-bold max-w-sm w-full">
-          Don't have any Account? 
+          Don't have any Account?
           <Link href={"/register"} className="text-blue-800">
-             Register
+            Register
           </Link>
         </p>
       </footer>

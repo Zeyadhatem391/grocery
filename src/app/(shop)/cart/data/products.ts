@@ -1,0 +1,58 @@
+export const products = [
+  {
+    id: "1",
+    name: "Prmium Organic Orange - 1KG",
+    image: "/Cart_Products_Images/orange.png",
+    salary: 20,
+    stock: true,
+  },
+  {
+    id: "2",
+    name: "Sausage With Fat Balady",
+    image: "/Cart_Products_Images/suausage.png",
+    salary: 400,
+    stock: true,
+  },
+  {
+    id: "3",
+    name: "Zanaty White Eggs - 30 Pieces",
+    image: "/Cart_Products_Images/eggs.png",
+    salary: 189,
+    stock: false,
+  },
+  {
+    id: "4",
+    name: "COOKS - SALT - 400G",
+    image: "/Cart_Products_Images/cooks-salt.png",
+    salary: 12,
+    stock: true,
+  },
+  {
+    id: "5",
+    name: "Diet Bread - 5 Pieces",
+    image: "/Cart_Products_Images/bread.png",
+    salary: 24.95,
+    stock: true,
+  },
+  {
+    id: "6",
+    name: "Almarai Fresh Full Fat Milk - 1.5L",
+    image: "/Cart_Products_Images/almarai.png",
+    salary: 78.5,
+    stock: true,
+  },
+  {
+    id: "7",
+    name: "El Arosa Loose Black Tea - 40",
+    image: "/Cart_Products_Images/elarosa-tea.png",
+    salary: 10,
+    stock: true,
+  },
+  {
+    id: "8",
+    name: "Italiano Pasta Spaghetti - 1kg",
+    image: "/Cart_Products_Images/italiano-pasta.png",
+    salary: 55,
+    stock: true,
+  },
+];
