@@ -3,13 +3,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <div className="relative w-full ">
-            <Image
-                src="/herobg.png"
-                alt="hero"
-                fill
-                className="object-cover"
-                
-            />
+            <Image src="/herobg.png" alt="hero" fill className="object-cover" />
 
             <div className="absolute inset-0 bg-[#014162F2]"></div>
 
@@ -25,7 +19,13 @@ export default function Hero() {
                         Shop Now
                     </button>
                 </div>
-                <Image className="lg:w-4/12" src="/heroimg.png" alt="hero" width={400} height={400} />
+                <Image
+                    className="lg:w-4/12"
+                    src="/heroimg.png"
+                    alt="hero"
+                    width={400}
+                    height={400}
+                />
             </div>
         </div>
     );

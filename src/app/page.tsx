@@ -3,11 +3,11 @@ import HotDeals from "./Components/HotDeals";
 import Nav from "./Components/Nav";
 const Home = () => {
     return (
-    <div>
-        <Nav />
-        <Hero />
-        <HotDeals />
-    </div>
+        <div>
+            <Nav />
+            <Hero />
+            <HotDeals />
+        </div>
     );
 };
 
