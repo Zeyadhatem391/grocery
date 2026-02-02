@@ -128,3 +128,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.content-container {
+  @apply w-171.5 h-auto p-6 my-4 border border-[#DAD8D8] rounded-xl;
+}
+
+.light-text {
+  @apply text-[#4A5565];
+}
