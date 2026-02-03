@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@base-ui/react": "^1.1.0",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-label": "^2.1.8",
@@ -16,11 +17,18 @@
     "@reduxjs/toolkit": "^2.11.2",
     "@tanstack/react-query": "^5.90.20",
     "axios": "^1.13.4",
+=======
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-slot": "^1.2.4",
+>>>>>>> nav_to_hot_deals_task
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.563.0",
+    "motion": "^12.29.2",
     "next": "16.1.5",
     "radix-ui": "^1.4.3",
+<<<<<<< HEAD
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-hook-form": "^7.71.1",
@@ -28,6 +36,11 @@
     "react-redux": "^9.2.0",
     "tailwind-merge": "^3.4.0",
     "zod": "^4.3.6"
+=======
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "tailwind-merge": "^3.4.0"
+>>>>>>> nav_to_hot_deals_task
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
