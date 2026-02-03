@@ -181,7 +181,7 @@ export default function HotDealsClient({
                                     </h2>
                                     <p>({product.size})</p>
                                 </div>
-                                <div className="flex gap-1 w-2/3">
+                                <div className="flex gap-1 ">
                                     {Array.from({ length: 5 }).map(
                                         (_, index) => (
                                             <Star
