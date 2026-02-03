@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-<<<<<<< HEAD
   images: {
     remotePatterns: [
       {
@@ -11,6 +10,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
     ],
   },
@@ -23,16 +26,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-=======
-    images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "images.unsplash.com",
-            },
-        ],
-    },
->>>>>>> nav_to_hot_deals_task
 };
 
 export default nextConfig;

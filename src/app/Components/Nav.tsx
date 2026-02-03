@@ -59,7 +59,7 @@ export default function Nav() {
                     </SelectContent>
                 </Select>
             </div>
-            <ShoppingCart className="text-end" />
+            <ShoppingCart className="text-end md:hidden block" />
             <div className="md:flex gap-1 hidden cursor-pointer ">
                 <House />
                 <p>Home</p>
