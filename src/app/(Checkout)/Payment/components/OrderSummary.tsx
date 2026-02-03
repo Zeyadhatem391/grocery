@@ -1,3 +1,4 @@
+"use client";
 import { Checkbox } from "@/components/ui/checkbox";
 import CartSummary from "../../components/CartSummary";
 
@@ -6,7 +7,7 @@ export default function OrderSummary() {
     <section className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-24 mt-10 px-4">
       {/* ================= Order Summary ================= */}
       <div className="w-full lg:w-[500]">
-        <CartSummary quantity={0} total={1} />
+        <CartSummary quantity={0} totalH={1} />
       </div>
 
       {/* ================= Billing & Total ================= */}

@@ -1,3 +1,4 @@
+"use client";
 import { Input } from "@/components/ui/input";
 import {
   ReceiptIndianRupee,
@@ -12,7 +13,7 @@ export default function OrderSummary() {
   return (
     <section className="flex flex-col lg:flex-row justify-center gap-8 lg:gap-24 mt-10 px-4 sm:px-0">
       {/* ================= Cart Summary ================= */}
-      <CartSummary quantity={1} total={0} />
+      <CartSummary quantity={1} totalH={0} />
 
       {/* ================= Order Options ================= */}
       <div className="w-full lg:w-[420] flex flex-col">

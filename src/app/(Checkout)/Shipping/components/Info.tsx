@@ -3,10 +3,11 @@ import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import CartSummary from "../../components/CartSummary";
+// import CartSummaryNurmal from "../../components/CartSummaryNurmal";
+// import CartSummaryNurmalTest from "../../components/CartSummaryTest";
+// import CartSummaryStatc from "../../components/CartSummartStatc";
 
 import { Car, Van, Package, Clock7, RotateCcw, ClockCheck } from "lucide-react";
-
-// ================= Info Component =================
 
 type FormValues = {
   firstName: string;
@@ -115,7 +116,7 @@ export default function Info() {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <Input placeholder="City" {...register("city")} />
-                <Input placeholder="Province" {...register("province")} />
+                <Input placeholder="provenance" {...register("province")} />
                 <Input placeholder="Postal Code" {...register("postalCode")} />
               </div>
             </div>
@@ -172,7 +173,7 @@ export default function Info() {
             <div className="flex flex-col gap-1">
               <label className="text-base lg:text-lg ">Estimated Arrival</label>
               <Input
-              className="lg:w-2/3"
+                className="lg:w-2/3"
                 placeholder="45 Min, 30/1/25 at 2:30 PM"
                 {...register("arrival")}
               />
@@ -182,7 +183,10 @@ export default function Info() {
       </div>
 
       {/* ================= Cart Summary ================= */}
-      <CartSummary quantity={0} total={0} />
+      <CartSummary quantity={0} totalH={0} />
+      {/* <CartSummaryStatc quantity={0} total={0}/> */}
+      {/* <CartSummaryNurmal /> */}
+      {/* <CartSummaryNurmalTest /> */}
     </section>
   );
 }

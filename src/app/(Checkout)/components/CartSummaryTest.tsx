@@ -1,89 +1,76 @@
 "use client";
-import { useQuery } from "@tanstack/react-query";
+
 import Image from "next/image";
 import { Trash, Plus } from "lucide-react";
+import { useCart, CartItem } from "@/hooks/use-cart-test";
 
-// API item shape
-type CartItem = {
-  id: number;
-  quantity: number;
-  unit_price: string;
-  subtotal: string;
-  meal: {
-    id: number;
-    title: string;
-    image_url: string;
-    final_price: number;
-    in_stock: boolean;
-  };
-};
+export default function CartSummaryNurmal() {
+  const { data, isLoading, isError } = useCart();
 
-// ================= Fetch Cart =================
-const fetchCartItems = async () => {
-  const res = await fetch("https://grocery.newcinderella.online/api/cart", {
-    credentials: "include",
-  });
+  if (isLoading) return <p>Loading cart...</p>;
+  if (isError) return <p>Error loading cart</p>;
 
-  if (!res.ok) throw new Error("Failed to fetch cart items");
-  const json = await res.json();
-  return json.data;
-};
+  const safeItems: CartItem[] = Array.isArray(data?.data?.items)
+    ? data.data.items
+    : [];
 
-export default function CartSummaryQuery() {
-  // ===== React Query =====
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["cart-items"],
-    queryFn: fetchCartItems,
-  });
+  const subtotal = safeItems.reduce(
+    (acc, item) => acc + Number(item.unit_price) * item.quantity,
+    0,
+  );
 
-  const subtotal = Number(data?.subtotal || 0);
-  const tax = Number(data?.tax || 0);
-  const discount = Number(data?.discount || 0);
-  const total = Number(data?.total || 0);
+  const total = data?.data?.total ? Number(data.data.total) : subtotal;
 
   return (
     <section className="flex justify-center gap-20">
-      {/* ================= Cart Summary ================= */}
       <div className="w-[500]">
         <p className="font-medium text-xl mb-2">Cart Summary</p>
 
         <div className="w-full border border-gray-200 pl-6 shadow-sm rounded-md">
+          {/* Products */}
           <div className="max-h-[565] px-2 overflow-y-auto custom-scroll">
-            {isLoading && <p className="p-4">Loading cart...</p>}
-            {isError && <p className="p-4 text-red-500">Failed to load cart</p>}
+            {safeItems.length === 0 && (
+              <p className="text-center py-10 text-gray-500">
+                Your cart is empty
+              </p>
+            )}
 
-            {data?.items?.map((item: CartItem) => (
+            {safeItems.map((item) => (
               <div
                 key={item.id}
                 className="w-full border-b border-gray-300 flex gap-6 py-6"
               >
+                {/* Image */}
                 <div className="flex flex-col items-center">
                   <Image
-                    src={item.meal.image_url || "/images/orange.png"}
+                    src={item.meal.image_url}
                     alt={item.meal.title}
                     width={79}
                     height={80}
                     className="object-cover"
                   />
-                  <div className="bg-[#0E1112] text-[12px] text-center rounded-tl-[15px] rounded-br-[15px] px-2">
-                    <p className="text-[#F7FCFF]">
-                      {item.meal.in_stock ? "In Stock" : "Out of Stock"}
-                    </p>
-                  </div>
+                  {item.meal.in_stock && (
+                    <div className="bg-[#0E1112] text-[12px] text-center rounded-tl-[15px] rounded-br-[15px] px-2 mt-1">
+                      <p className="text-[#F7FCFF]">In Stock</p>
+                    </div>
+                  )}
                 </div>
 
+                {/* Details */}
                 <div className="flex-1">
                   <p className="font-normal text-lg">{item.meal.title}</p>
 
-                  <div className="flex justify-start gap-24 items-center pt-4">
+                  <div className="flex justify-between items-center pt-4">
+                    {/* Quantity */}
                     <div className="flex items-center border border-gray-200 gap-6 px-3 py-1 rounded-xl">
                       <Trash className="w-5 h-5 cursor-pointer" />
                       <p className="font-normal text-lg">{item.quantity}</p>
                       <Plus className="w-5 h-5 cursor-pointer" />
                     </div>
 
+                    {/* Price */}
                     <div className="font-medium text-xl">
-                      £ {item.meal.final_price}
+                      £ {item.unit_price}
                     </div>
                   </div>
                 </div>
@@ -91,6 +78,7 @@ export default function CartSummaryQuery() {
             ))}
           </div>
 
+          {/* Total */}
           <div className="py-4 pr-7">
             <p className="text-[#014162] font-medium text-xl">Total Amount</p>
 
@@ -103,15 +91,8 @@ export default function CartSummaryQuery() {
               </div>
 
               <div className="flex justify-between">
-                <p className="text-[#6B6F75] text-lg">Tax</p>
-                <p className="text-[#6B6F75] text-lg">£ {tax.toFixed(2)}</p>
-              </div>
-
-              <div className="flex justify-between">
-                <p className="text-[#6B6F75] text-lg">Discount</p>
-                <p className="text-[#6B6F75] text-lg">
-                  - £ {discount.toFixed(2)}
-                </p>
+                <p className="text-[#6B6F75] text-lg">Shipping</p>
+                <p className="text-[#6B6F75] text-lg">£ 0.00</p>
               </div>
             </div>
 
