@@ -128,6 +128,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
 @layer utilities {
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
@@ -136,4 +137,11 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+}
+.content-container {
+  @apply w-171.5 h-auto p-6 my-4 border border-[#DAD8D8] rounded-xl;
+}
+
+.light-text {
+  @apply text-[#4A5565];
 }
