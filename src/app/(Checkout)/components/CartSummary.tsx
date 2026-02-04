@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Trash, Plus } from "lucide-react";
 import { useCart, CartItem } from "@/hooks/use-cart";
+import CartSummarySkeleton from "./CartSummarySkeleton";
 
 type CartSummaryProps = {
   quantity: number;
@@ -11,7 +12,7 @@ type CartSummaryProps = {
 export default function CartSummary({ quantity, totalH }: CartSummaryProps) {
   const { data, isLoading, isError } = useCart();
 
-  if (isLoading) return <p>Loading cart...</p>;
+  if (isLoading) return <CartSummarySkeleton />;
   if (isError) return <p>Error loading cart</p>;
 
   const safeItems: CartItem[] = Array.isArray(data?.data?.items)
